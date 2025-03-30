@@ -19,7 +19,7 @@ run_install() {
 		lib32-libpipewire libpulse lib32-libpulse vkd3d lib32-vkd3d wget
 		xdg-utils vulkan-mesa-layers lib32-vulkan-mesa-layers freetype2
 		lib32-freetype2 fuse2 mangohud lib32-mangohud gamescope gamemode
-		lib32-gamemode wine lib32-libglvnd lib32-gnutls xterm
+		lib32-gamemode wine lib32-libglvnd lib32-gnutls xterm python-protobuf
 	)
 
 	echo '== checking for updates'
