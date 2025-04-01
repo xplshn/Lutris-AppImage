@@ -107,6 +107,7 @@ URUNTIME="https://github.com/VHSgunzo/uruntime/releases/latest/download/uruntime
 
 wget --retry-connrefused --tries=30 "$URUNTIME" -O ./uruntime
 chmod +x ./uruntime
+sed -i 's|1024M|1536M|g' ./uruntime
 
 # Add udpate info to runtime
 echo "Adding update information \"$UPINFO\" to runtime..."
