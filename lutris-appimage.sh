@@ -120,7 +120,7 @@ echo "Generating AppImage..."
 	--no-history --no-create-timestamp \
 	--compression zstd:level=22 -S26 -B32 \
 	--header uruntime \
-	-i ./AppDir -o Lutris+wine-"$VERSION"-anylinux.dwarfs-"$ARCH".AppImage
+	-i ./AppDir -o Lutris+wine-"$VERSION"-anylinux-"$ARCH".AppImage
 
 zsyncmake *dwarfs*.AppImage -u *dwarfs*.AppImage
 echo "All Done!"
