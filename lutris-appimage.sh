@@ -20,6 +20,7 @@ run_install() {
 		xdg-utils vulkan-mesa-layers lib32-vulkan-mesa-layers freetype2
 		lib32-freetype2 fuse2 mangohud lib32-mangohud gamescope gamemode
 		lib32-gamemode wine lib32-libglvnd lib32-gnutls xterm python-protobuf
+		xdg-desktop-portal-gtk
 	)
 
 	echo '== checking for updates'
@@ -119,7 +120,7 @@ echo "Generating AppImage..."
 	--no-history --no-create-timestamp \
 	--compression zstd:level=22 -S26 -B32 \
 	--header uruntime \
-	-i ./AppDir -o Lutris+wine-"$VERSION"-anylinux.dwarfs-"$ARCH".AppImage
+	-i ./AppDir -o Lutris+wine-"$VERSION"-anylinux-"$ARCH".AppImage
 
 zsyncmake *dwarfs*.AppImage -u *dwarfs*.AppImage
 echo "All Done!"
