@@ -122,5 +122,5 @@ echo "Generating AppImage..."
 	--header uruntime \
 	-i ./AppDir -o Lutris+wine-"$VERSION"-anylinux-"$ARCH".AppImage
 
-zsyncmake *dwarfs*.AppImage -u *dwarfs*.AppImage
+zsyncmake *.AppImage -u *.AppImage
 echo "All Done!"
