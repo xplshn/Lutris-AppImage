@@ -108,7 +108,6 @@ URUNTIME="https://github.com/VHSgunzo/uruntime/releases/latest/download/uruntime
 
 wget --retry-connrefused --tries=30 "$URUNTIME" -O ./uruntime
 chmod +x ./uruntime
-sed -i 's|1024M|1536M|g' ./uruntime
 
 # Add udpate info to runtime
 echo "Adding update information \"$UPINFO\" to runtime..."
@@ -118,6 +117,7 @@ echo "Generating AppImage..."
 ./uruntime --appimage-mkdwarfs -f \
 	--set-owner 0 --set-group 0 \
 	--no-history --no-create-timestamp \
+	--categorize=hotness --hotness-list=lutris.dwfsprof \
 	--compression zstd:level=22 -S26 -B32 \
 	--header uruntime \
 	-i ./AppDir -o Lutris+wine-"$VERSION"-anylinux-"$ARCH".AppImage
