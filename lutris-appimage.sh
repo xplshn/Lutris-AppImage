@@ -20,7 +20,7 @@ run_install() {
 		xdg-utils vulkan-mesa-layers lib32-vulkan-mesa-layers freetype2
 		lib32-freetype2 fuse2 mangohud lib32-mangohud gamescope gamemode
 		lib32-gamemode wine lib32-libglvnd lib32-gnutls xterm python-protobuf
-		xdg-desktop-portal-gtk pipewire-pulse
+		xdg-desktop-portal-gtk pipewire-pulse zenity-gtk3
 	)
 
 	echo '== checking for updates'
