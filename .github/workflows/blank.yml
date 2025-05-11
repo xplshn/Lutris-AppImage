@@ -37,6 +37,10 @@ jobs:
       with:
        name: version
        path: ~/version
+
+        wget --retry-connrefused --tries=30 \
+          "https://archive.archlinux.org/packages/p/python/python-3.12.7-1-x86_64.pkg.tar.zst"
+        pacman -U --noconfirm python-3.12.7-1-x86_64.pkg.tar.zst
     
   release:
       needs: [build]
