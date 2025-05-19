@@ -130,7 +130,7 @@ echo "Generating [sqfs]AppBundle...(Go runtime)"
 ./pelf --add-appdir ./AppDir \
 	--compression "--categorize=hotness --hotness-list=lutris.dwfsprof -C zstd:level=22 -S26 -B32" \
 	--appbundle-id="net.lutris.Lutris-$(date +%d_%m_%Y)-contrarybaton60" \
-	--appimage-compat \
+	--appimage-compat --disable-use-random-workdir \
 	--add-updinfo "$UPINFO" \
 	--output-to "Lutris+wine-${VERSION}-anylinux-${ARCH}.dwfs.AppBundle"
 
